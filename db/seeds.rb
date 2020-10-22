@@ -1,7 +1,32 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require "csv"
+
+Photo.delete_all
+Photographer.delete_all
+
+filename = Rails.root.join("db/photos.csv")
+
+puts "Loading Photos from the CSV file: #{filename}"
+
+csv_data = File.read(filename)
+
+photos = CSV.parse(csv_data, headers: true, encoding: "utf-8")
+
+photos.each do |p|
+  photographer = Photographer.find_or_create_by(photographer: p["photographer"])
+
+  if photographer&.valid?
+    photo = photographer.photos.create(
+      width:        p["width"],
+      height:       p["height"],
+      url:          p["url"],
+      download_url: p["download_url"]
+    )
+
+    puts "Invalid Photo #{p['url']}" unless photo&.valid?
+  else
+    puts "Invalid Photographer #{p['photographer']}"
+  end
+end
+
+puts "Created #{Photographer.count} Photographers"
+puts "Created #{Photo.count} Photos"
