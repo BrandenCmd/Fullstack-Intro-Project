@@ -5,5 +5,6 @@ class PhotographersController < ApplicationController
 
   def show
     @photographer = Photographer.find(params[:id])
+    @photos = Photo.where(photographer: @photographer.id).all
   end
 end

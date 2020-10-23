@@ -2,3 +2,8 @@
 
 <h2>Photos:</h2>
 <h3>List of photos here</h3>
+<ul>
+  <% @photos.each do |photo| %>
+    <li><%= link_to photo.id, photo %></li>
+  <% end %>
+</ul>

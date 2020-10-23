@@ -1,7 +1,18 @@
 <h2 class="title">Photographers</h2>
 
-<ul>
-  <% @photographers.each do |photographer| %>
-    <li><%= link_to photographer.photographer, photographer %></li>
-  <% end %>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Photographer ID">Link</abbr></th>
+      <th><abbr>Photographer</abbr></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @photographers.each do |photographer| %>
+      <tr>
+        <th><%= link_to photographer.id, photographer %></th>
+        <td><%= photographer.photographer %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
