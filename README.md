@@ -6,17 +6,21 @@ Read on
 
 Photographer
 
+```
 - photographer              (string, present, unique)
 - Has many Photos
+```
 
 Photo
 
+```
 - Belongs to Photographer
 - photographer              (FK)
 - width                     (integer, present)
 - height                    (integer, present)
 - url                       (string, present, unique)
 - download_url              (string, present, unique)
+```
 
 ## Routes
 
