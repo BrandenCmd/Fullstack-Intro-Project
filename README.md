@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Read on
 
-Things you may want to cover:
+## Models
 
-* Ruby version
+Photographer
 
-* System dependencies
+- photographer              (string, present, unique)
+- Has many Photos
 
-* Configuration
+Photo
 
-* Database creation
+- Belongs to Photographer
+- photographer              (FK)
+- width                     (integer, present)
+- height                    (integer, present)
+- url                       (string, present, unique)
+- download_url              (string, present, unique)
 
-* Database initialization
+## Routes
 
-* How to run the test suite
+```
+GET /                       (Home Page)
+GET /Photographers          (Show all Photographers, paginated)
+GET /Photographers/:id      (Show a Photographer by ID)
+GET /Portrait               (Show all Photos in Portrait, paginated)
+GET /Landscape              (Show all Photos in Landscape, paginated)
+GET /Photos/:id             (Show a Photo by ID)
+GET /About                  (Show information about the data sets used and the ERD)
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Controllers
 
-* Deployment instructions
-
-* ...
+HomePageController - index
+PhotographersController - index, show
+PhotosController - index, show
+AboutController - index
