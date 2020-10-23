@@ -1,2 +1,7 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
+<h1>Photos</h1>
+
+<ul>
+  <% @photos.each do |photo| %>
+    <li>Image: <%= link_to photo.id, photo %> Photographer: <%= photo.photographer.photographer %></li>
+  <% end %>
+</ul>
