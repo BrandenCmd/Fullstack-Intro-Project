@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.includes(:photographer).all
+    @photos = Photo.includes(:photographer).page(params[:page]).all
   end
 
   def show
