@@ -2,6 +2,8 @@
 
 <h2 class="title">Photo by <%= link_to @photo.photographer.photographer, @photographer %></h2>
 
+<img src="<%= @photo.download_url %>" width="500" height="500" alt="A picture">
+
 <h2 class="subtitle mt-5 mb-3">Photo Details:</h2>
 
 <p>

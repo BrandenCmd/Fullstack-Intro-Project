@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h2 class="title">A basic Photography website by, Branden Carpick</h2>
+<h3 class="subtitle">Images courtesy of Unsplash via Lorem Picsum</h3>
+
+<img src="<%= @photo.download_url %>" width="500" height="500" alt="A picture">
+<p>
+  <strong>Image by:</strong>
+  <%= @photo.photographer.photographer %>
+</p>
