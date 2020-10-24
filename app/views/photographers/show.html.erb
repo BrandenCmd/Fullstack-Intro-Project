@@ -1,6 +1,6 @@
 <h2 class="title">Photographer <%= @photographer.photographer %></h2>
 
-<h2>Photos:</h2>
+<h2 class="subtitle mt-5 mb-3">Photos:</h2>
 <ul>
   <% @photos.each do |photo| %>
     <li><%= link_to photo.id, photo %></li>
