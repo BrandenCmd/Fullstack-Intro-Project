@@ -1,5 +1,11 @@
 <h2 class="title">Photographers</h2>
 
+<h3 class="subtitle mt-5 mb-3">Search by Name: </h3>
+<%= form_tag(photographers_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag ("Search") %>
+<% end %>
+
 <%= paginate @photographers %>
 <table class="table is-striped is-fullwidth is-bordered">
   <thead>
