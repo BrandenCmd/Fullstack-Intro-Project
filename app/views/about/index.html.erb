@@ -7,20 +7,46 @@
 
 <h4 class="subtitle">Data for Photos looks like:</h4>
 
-<ul>
-  <li>ID: <%= @photo.id %></li>
-  <li>Photographer(Reference): <%= @photo.photographer %></li>
-  <li>Width: <%= @photo.width %></li>
-  <li>Height: <%= @photo.height %></li>
-  <li>Url: <%= @photo.url %></li>
-  <li>Download_url: <%= @photo.download_url %></li>
-</ul>
+<p>
+  <strong>ID:</strong>
+  <%= @photo.id %>
+</p>
+
+<p>
+  <strong>Photographer(Reference):</strong>
+  <%= @photo.photographer.photographer %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @photo.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @photo.height %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @photo.url %>
+</p>
+
+<p>
+  <strong>Download_url:</strong>
+  <%= @photo.download_url %>
+</p>
 
 <br>
 
 <h4 class="subtitle">Data for Photographers looks like:</h4>
 
-<ul>
-  <li>ID: <%= @photographer.id %></li>
-  <li>Photographer: <%= @photographer.photographer %></li>
-</ul>
+<p>
+  <strong>ID:</strong>
+  <%= @photographer.id %>
+</p>
+
+<p>
+  <strong>Photographer:</strong>
+  <%= @photographer.photographer %>
+</p>

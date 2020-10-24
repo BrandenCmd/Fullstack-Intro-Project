@@ -36,7 +36,9 @@ GET /About                  (Show information about the data sets used and the E
 
 ## Controllers
 
-HomePageController - index
-PhotographersController - index, show
-PhotosController - index, show
-AboutController - index
+```
+HomePageController          - index
+PhotographersController     - index, show
+PhotosController            - index, show
+AboutController             - index
+```

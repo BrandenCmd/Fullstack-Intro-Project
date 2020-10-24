@@ -1,5 +1,21 @@
 <h2 class="title">Photo by <%= @photo.photographer.photographer %></h2>
-<h3>Width: <%= @photo.width%></h3>
-<h3>Height: <%= @photo.height%></h3>
-<h3>URL: <a href="<%= @photo.url %>">Click Here!</a></h3>
-<h3>Download URL: <a href="<%= @photo.download_url %>">Click Here!</a></h3>
+
+<p>
+  <strong>Width:</strong>
+  <%= @photo.width%>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @photo.height%>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <a href="<%= @photo.url %>">Click Here!</a>
+</p>
+
+<p>
+  <strong>Download URL:</strong>
+  <a href="<%= @photo.download_url %>">Click Here!</a>
+</p>
