@@ -1,4 +1,4 @@
-<h2 class="title">Photo by <%= @photo.photographer.photographer %></h2>
+<h2 class="title">Photo by <%= link_to @photo.photographer.photographer, @photographer %></h2>
 
 <p>
   <strong>Width:</strong>
