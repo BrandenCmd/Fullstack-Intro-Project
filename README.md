@@ -28,8 +28,6 @@ Photo
 GET /                       (Home Page)
 GET /Photographers          (Show all Photographers, paginated)
 GET /Photographers/:id      (Show a Photographer by ID)
-GET /Portrait               (Show all Photos in Portrait, paginated)
-GET /Landscape              (Show all Photos in Landscape, paginated)
 GET /Photos/:id             (Show a Photo by ID)
 GET /About                  (Show information about the data sets used and the ERD)
 ```
@@ -37,7 +35,7 @@ GET /About                  (Show information about the data sets used and the E
 ## Controllers
 
 ```
-HomePageController          - index
+HomeController              - index
 PhotographersController     - index, show
 PhotosController            - index, show
 AboutController             - index
