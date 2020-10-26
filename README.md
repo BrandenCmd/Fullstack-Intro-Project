@@ -28,6 +28,7 @@ Photo
 GET /                       (Home Page)
 GET /Photographers          (Show all Photographers, paginated)
 GET /Photographers/:id      (Show a Photographer by ID)
+GET /Photos                 (Show all Photos, paginated)
 GET /Photos/:id             (Show a Photo by ID)
 GET /About                  (Show information about the data sets used and the ERD)
 ```
